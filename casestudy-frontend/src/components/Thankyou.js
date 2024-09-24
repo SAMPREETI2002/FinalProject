@@ -44,7 +44,7 @@ const ThankYou = () => {
               }
             } else {
               // Otherwise, trigger the /buyPlan endpoint
-              const buyPlanResponse = await axios.post("http://localhost:9099/buyPlan", {
+              const buyPlanResponse = await axios.post("http://localhost:9099/choosePlan", {
                 customerMail: userEmail,
                 planName: planResponse.data.plan.planName,
                 planType: state.planType,
