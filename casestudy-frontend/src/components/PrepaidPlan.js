@@ -5,7 +5,7 @@ import { loadStripe } from '@stripe/stripe-js';
 import { useNavigate } from 'react-router-dom'; // Hook for navigation
 import './styles/PrepaidPlan.css'; // Import the CSS file specific to Prepaid Plans
 import prepaidImage from '../assets/images/prepaid.png'; // Adjust path if necessary
-
+/* eslint-disable no-unused-vars */
 const stripePromise = loadStripe('pk_test_51PzMJ92LE9UHjUCiRYxbweuMYXgYud6jst1hGkeWirgTU3mBVfPqqkTmEX4uXSPqUV10ab9uviGTBAsjOgsJJUPg00ydnLub8D');
 
 const PrepaidPlans = () => {
