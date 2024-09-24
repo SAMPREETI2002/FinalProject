@@ -41,7 +41,7 @@ const PrepaidPlans = () => {
       </main>
 <br/>
       <div className="prepaid-main-content" >
-        <div className='prepaid-plan-content-center'>
+        <div className=''>
         <h1>Prepaid Plans</h1>
           <p>Select a plan that suits you best</p>
 

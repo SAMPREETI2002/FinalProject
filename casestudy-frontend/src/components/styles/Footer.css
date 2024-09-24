@@ -3,7 +3,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: #e3f5f8;
+    background-color: #fffff3;
 }
 
 /* Wrapper to control layout */
@@ -20,7 +20,7 @@ html, body {
 
 /* Footer styling */
 .footer {
-    background-color: #083D77;
+    background-color: black;
     color: white;
     text-align: center;
     padding: 20px 10px; /* Increased vertical padding */
@@ -46,6 +46,10 @@ html, body {
     color: white;
 }
 
+.footer p:hover {
+    color: #1167E5;
+}
+
 /* Social media icons styling */
 .social-icons {
     margin-top: 10px;
@@ -59,4 +63,5 @@ html, body {
 
 .social-icons .icon:hover {
     opacity: 0.8; /* Slight hover effect */
+    color: #1167E5;
 }

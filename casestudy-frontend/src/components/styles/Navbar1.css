@@ -1,77 +1,149 @@
-/* Navbar styling */
+/* Custom Navbar Styles */
 .navbar {
-  background-color: #083D77; /* Updated Navbar background */
-  padding: 0.5rem 1rem;
-  position:relative;
+  background-color: #1a1a1a; /* Dark background for a modern look */
+  padding: 15px 20px;
+  border-bottom: 2px solid #0d6efd; /* Accent color for a modern touch */
+  height: 70px;
 }
 
 .navbar-brand {
+  font-size: 1.5rem;
+  color: #ffffff;
   font-weight: bold;
-  color: #fff; /* White text for the brand */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: color 0.3s ease;
 }
 
-.navbar-nav {
-  align-items: center; /* Ensure vertical centering */
+.navbar-brand:hover {
+  color: #0d6efd; /* Highlight effect on hover */
 }
 
-.dropdown-menu {
-  right: 0; /* Align dropdown menu to the right */
-}
-
-
-.navbar-nav .nav-item {
-  margin: 0 15px; /* Spacing between items */
-}
-
+/* Nav links */
 .navbar-nav .nav-link {
-  color: #fff; /* White text */
-  padding: 0.5rem 1rem;
-  transition: color 0.3s ease; /* Smooth transition for hover effect */
-  background-color: transparent; /* No background color */
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 8px 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  border-radius: 5px;
 }
 
 .navbar-nav .nav-link:hover {
-  color: Black; /* Gold color on hover for text */
+  color: #0d6efd; /* Bootstrap primary blue */
+  background-color: rgba(255, 255, 255, 0.1); /* Light background on hover */
 }
 
-.navbar-nav.me-auto {
-  margin: 0; /* Align links to the left */
+/* Dropdown styling */
+.dropdown-toggle {
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 8px 15px;
+  background-color: transparent;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
 }
 
-.navbar-nav.ms-auto {
-  margin-left: auto; /* Push the profile section to the right */
+.dropdown-toggle:hover {
+  color: #0d6efd;
 }
 
 .dropdown-menu {
-  background-color: #ffffff; /* Background color of the dropdown */
-  border: 1px solid #ddd; /* Light border for the dropdown */
-  border-radius: 4px; /* Rounded corners */
-  width: 228px; /* Set a fixed width for the dropdown */
-  right: 0; /* Align dropdown to the right */
-  left: auto; /* Ensure it's aligned to the right */
-  top: 100%; /* Position below the button */
-  z-index: 1000; /* Ensure it's above other content */
-  transform: translateX(-20%); /* Adjust the position slightly to the left if needed */
+  background-color: #1a1a1a; /* Match with navbar */
+  border: none;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .dropdown-item {
-  color: #000; /* Black text for the dropdown items */
+  color: black;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .dropdown-item:hover {
-  background-color: #f8f9fa; /* Light grey background for hover effect */
+  background-color: #0d6efd; /* Highlight with primary blue */
+  color: #ffffff;
 }
 
 .dropdown-divider {
-  border-top: 1px solid #ddd; /* Divider color */
+  border-color: #ffffff;
 }
 
-.dropdown-item.logout-btn {
-  color: #dc3545; /* Red color for logout button */
-  background-color: transparent; /* Remove default background */
-  border: none; /* Remove border */
+/* Navbar Toggler for small screens */
+.navbar-toggler {
+  border: none;
 }
 
-.dropdown-item.logout-btn:hover {
-  color: #c82333; /* Darker red for hover effect */
+.navbar-toggler-icon {
+  background-color: white;
+  width: 25px;
+  height: 2px;
+  position: relative;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: '';
+  background-color: white;
+  width: 25px;
+  height: 2px;
+  position: absolute;
+  left: 0;
+}
+
+.navbar-toggler-icon::before {
+  top: -8px;
+}
+
+.navbar-toggler-icon::after {
+  top: 8px;
+}
+
+/* Profile email text */
+.dropdown-item {
+  color: #ffffff; /* White text for user email */
+  font-weight: bold;
+}
+
+/* Logout button */
+.logout-btn {
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+  text-align: left;
+  padding: 10px 20px;
+  width: 100%;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #0d6efd;
+  color: #ffffff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-nav .nav-link {
+    margin: 5px 0;
+    padding: 10px;
+  }
+
+  .dropdown {
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-nav .nav-link {
+    margin-right: 20px;
+  }
 }

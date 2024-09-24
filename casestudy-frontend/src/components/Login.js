@@ -44,11 +44,11 @@ function LoginPage() {
   return (
     <div className="auth-container">
       <div className="auth-box">
-        <h2>Login</h2>
+        <h2 style={{ fontFamily: "Helvetica, Arial, sans-serif" }}>Login</h2>
         {error && <p className="error">{error}</p>}
         <form onSubmit={handleSubmit}>
           <div className="inputGroup">
-            <label htmlFor="email">Email:</label>
+            <label htmlFor="email" style={{ fontFamily: "Helvetica, Arial, sans-serif" }}>Email:</label>
             <input
               type="email"
               id="email"
@@ -59,7 +59,7 @@ function LoginPage() {
             />
           </div>
           <div className="inputGroup">
-            <label htmlFor="password">Password:</label>
+            <label htmlFor="password" style={{ fontFamily: "Helvetica, Arial, sans-serif" }}>Password:</label>
             <input
               type="password"
               id="password"
@@ -69,7 +69,7 @@ function LoginPage() {
               className="input"
             />
           </div>
-          <button type="submit" className="button">Login</button>
+          <button type="submit" className="button" style={{ fontFamily: "Helvetica, Arial, sans-serif" }}>Login</button>
         </form>
       </div>
     </div>

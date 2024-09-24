@@ -13,6 +13,7 @@ import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
 import nodemailer from 'nodemailer';
 import crypto from 'crypto';
+import path from 'path';
 import {
   Customer,
   Invoice,
@@ -24,6 +25,7 @@ import {
 const app = express();
 const PORT = 9099;
 const SECRET_KEY = process.env.JWT_SECRET;
+const PASSWORD_SECRET_KEY = process.env.PASSWORD_SECRET_KEY || 'your_default_secret_key_here';
 let otpStorage = {}; 
 
 // Configure CORS
@@ -427,6 +429,103 @@ app.post('/login', async (req, res) => {
   }
 });
 
+app.post("/forgot-password", async (req, res) => {
+  const { email } = req.body;
+
+  if (!email) {
+    return res.status(400).json({ error: "Email is required" });
+  }
+
+  try {
+    const customer = await prisma.customer.findUnique({
+      where: { customerMail: email },
+    });
+
+    if (!customer) {
+      return res.status(404).json({ error: "Customer not found" });
+    }
+
+    const resetToken = jwt.sign({ id: customer.customerId }, PASSWORD_SECRET_KEY, { expiresIn: '1h' });
+
+    const resetLink = `http://localhost:9099/reset-password?token=${resetToken}`;
+
+    // Send the reset link via email
+    const transporter = nodemailer.createTransport({
+      host: "smtp.gmail.com",
+      port: 587,
+      secure: false, // or 'STARTTLS'
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: "kvzj vlxs aptt qtki",
+      },
+    });
+
+    const mailOptions = {
+      from: process.env.EMAIL_USER,
+      to: email,
+      subject: "Password Reset Request",
+      text: `Click this link to reset your password: ${resetLink}`,
+    };
+
+    await transporter.sendMail(mailOptions);
+
+    res.status(200).json({ message: "Password reset link sent to your email" });
+  } catch (error) {
+    console.error("Error in forgot password:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+
+app.set('view engine', 'ejs');
+app.set('views', path.join(process.cwd(), 'views'));
+
+app.get("/reset-password", (req, res) => {
+  const { token } = req.query;
+  res.render("reset-password", { token });
+});
+
+app.post("/reset-password", async (req, res) => {
+  const { token, newPassword, confirmPassword } = req.body;
+
+  console.log("Received data:", req.body);
+
+  if (!newPassword || !confirmPassword) {
+    return res.status(400).json({ error: "Both new password and confirm password are required" });
+  }
+
+  if (newPassword !== confirmPassword) {
+    return res.status(400).json({ error: "Passwords do not match" });
+  }
+
+  try {
+    // Verify the token
+    const decoded = jwt.verify(token, PASSWORD_SECRET_KEY);
+    const customerId = decoded.id;
+
+    // Find the customer
+    const customer = await prisma.customer.findUnique({
+      where: { customerId: customerId },
+    });
+
+    if (!customer) {
+      return res.status(404).json({ error: "Customer not found" });
+    }
+
+    // Hash the new password
+    const hashedPassword = bcrypt.hashSync(newPassword, 8);
+
+    // Update the customer's password
+    await prisma.customer.update({
+      where: { customerId: customerId },
+      data: { password: hashedPassword },
+    });
+
+    res.status(200).json({ message: "Password successfully reset" });
+  } catch (error) {
+    console.error("Error resetting password:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
 
 /**
  * @swagger

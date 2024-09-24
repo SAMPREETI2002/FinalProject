@@ -120,11 +120,11 @@ function RegisterPage() {
   return (
     <div className="auth-container">
       <div className="auth-box">
-        <h2>Register</h2>
+        <h2 style={{ fontFamily: "Helvetica, Arial, sans-serif" }}>Register</h2>
         {error && <p className="error-message">{error}</p>}
         <form onSubmit={handleSubmit}>
           <div className="inputGroup">
-            <label htmlFor="name">Full Name</label>
+            <label htmlFor="name" style={{ fontFamily: "Helvetica, Arial, sans-serif" }}>Full Name</label>
             <input
               type="text"
               id="name"
@@ -135,7 +135,7 @@ function RegisterPage() {
             {nameError && <p className="error-message">{nameError}</p>}
           </div>
           <div className="inputGroup">
-            <label htmlFor="email">Email</label>
+            <label htmlFor="email" style={{ fontFamily: "Helvetica, Arial, sans-serif" }}>Email</label>
             <input
               type="text"  // Changed type to "text"
               id="email"
@@ -146,7 +146,7 @@ function RegisterPage() {
             {emailError && <p className="error-message">{emailError}</p>}
           </div>
           <div className="inputGroup">
-            <label htmlFor="password">Password</label>
+            <label htmlFor="password" style={{ fontFamily: "Helvetica, Arial, sans-serif" }}>Password</label>
             <input
               type="password"
               id="password"
@@ -157,7 +157,7 @@ function RegisterPage() {
             {passwordError && <p className="error-message">{passwordError}</p>}
           </div>
           <div className="inputGroup">
-            <label htmlFor="phone">Phone</label>
+            <label htmlFor="phone" style={{ fontFamily: "Helvetica, Arial, sans-serif" }}>Phone</label>
             <input
               type="text"
               id="phone"
@@ -167,7 +167,7 @@ function RegisterPage() {
             />
             {phoneError && <p className="error-message">{phoneError}</p>}
           </div>
-          <button type="submit" className="auth-btn">Register</button>
+          <button type="submit" className="auth-btn" style={{ fontFamily: "Helvetica, Arial, sans-serif" }}>Register</button>
         </form>
       </div>
     </div>

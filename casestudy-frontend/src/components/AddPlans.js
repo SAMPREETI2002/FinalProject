@@ -109,7 +109,7 @@ function AddPlans() {
             onChange={handleChange}
             required
           />
-          <select
+          <select 
             name="planType"
             value={plan.planType}
             onChange={handleChange}

@@ -61,38 +61,31 @@
 
 .renew-plan {
   display: flex;
-  align-items: center; /* Align items (checkbox and text) vertically centered */
   justify-content: flex-start; /* Align content to the left */
   margin-top: 10px; /* Space between the invoice info and this section */
+  
 }
-
-.renew-plan label {
-  display: flex;
-  align-items: center; /* Ensure the checkbox and the text are on the same line */
-  margin-right: 10px; /* Space between checkbox and text */
-  cursor: pointer;
+.renew-plan input{
+  margin-left: 0;
+  width: 1rem;
+  height: 1rem;
+  margin-top: 1rem;
 }
-
-.renew-plan input[type="checkbox"] {
-  margin-right: 5px; /* Space between checkbox and the label text */
+.renew-plan p{
+  margin-left: 1rem;
+  font-weight: 600;
 }
-
-.renew-plan .change-text {
-  margin-left: 0; /* Remove extra space to bring "Change Plan" together */
-  font-weight: normal; /* You can adjust font-weight if you want lighter text */
-}
-
-
 .pay-button {
   margin-top: 10px;
   padding: 10px 20px;
   border: none;
-  border-radius: 4px;
-  background-color: #083d77;
+  border-radius: 7px;
+  background-color: black;
   color: white;
   cursor: pointer;
 }
 
 .pay-button:hover {
-  background-color: #002266;
+  background-color: black;
+  color: #1657E1;
 }

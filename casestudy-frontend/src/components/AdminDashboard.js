@@ -62,7 +62,7 @@ function AdminDashboard() {
   required
 />
 <button onClick={handleChangeDueDate} className="admin-button" style={{ marginTop: '10px' }}>
-  Change Due Date
+  Proceed
 </button>
 <br/>
               <button onClick={() => {

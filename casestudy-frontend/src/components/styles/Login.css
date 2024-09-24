@@ -4,29 +4,33 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #e5f3f5; /* Light blue to match the rest of the page */
-  font-family: 'Helvetica, Arial, sans-serif'; /* Set to Helvetica */
+  background-color: #fffff3; /* Light blue to match the rest of the page */
 }
 
 /* Box containing the form */
 .auth-box {
-  background-color: white; /* Make sure this background color is different from the page */
+  background-color: white;
   padding: 2rem;
   border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for the form box */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
   text-align: center;
   width: 400px;
-  font-family: 'Helvetica, Arial, sans-serif'; /* Set to Helvetica */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect on the form box */
+.auth-box:hover {
+  transform: translateY(-10px); /* Slight lift on hover */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
 }
 
 /* Heading styling */
-h2 {
+.auth-box h2 {
   font-size: 2rem;
   color: black; /* Heading in black for contrast */
   margin-bottom: 1.5rem;
   text-transform: uppercase;
   letter-spacing: 1.2px;
-  font-family: 'Helvetica, Arial, sans-serif'; /* Set to Helvetica */
 }
 
 /* Error message styling */
@@ -35,7 +39,6 @@ h2 {
   font-size: 1rem;
   margin-bottom: 1rem;
   font-weight: bold;
-  font-family: 'Helvetica, Arial, sans-serif'; /* Set to Helvetica */
 }
 
 /* Input group styling */
@@ -51,7 +54,6 @@ label {
   margin-bottom: 0.5rem;
   display: block;
   font-weight: bold;
-  font-family: 'Helvetica, Arial, sans-serif'; /* Set to Helvetica */
 }
 
 /* Input field styling */
@@ -63,7 +65,6 @@ label {
   font-size: 1rem;
   box-sizing: border-box;
   transition: border-color 0.3s ease;
-  font-family: 'Helvetica, Arial, sans-serif'; /* Set to Helvetica */
 }
 
 /* Input hover and focus state */
@@ -74,7 +75,7 @@ label {
 
 /* Button styling */
 .button {
-  background-color: #083D77;
+  background-color: black;
   color: white;
   border: none;
   padding: 0.8rem 1.5rem;
@@ -85,13 +86,12 @@ label {
   width: 100%;
   transition: background-color 0.3s ease, transform 0.2s ease;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Button shadow */
-  font-family: 'Helvetica, Arial, sans-serif'; /* Set to Helvetica */
 }
 
 /* Button hover state */
 .button:hover {
-  background-color: #083D77; /* Light accent on hover */
-  color: black; /* Dark blue text on hover */
+  background-color: black; /* Light accent on hover */
+  color: #1167E5; /* Dark blue text on hover */
   transform: translateY(-3px); /* Lift effect */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
 }

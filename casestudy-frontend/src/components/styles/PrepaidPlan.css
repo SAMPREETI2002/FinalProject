@@ -10,20 +10,20 @@
 
 .prepaid-container p {
   color: black;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Helvetica, sans-serif;
   font-size: 20px;
 }
 
 .prepaid-container h1 {
   font-size: 38px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Helvetica, sans-serif;
   text-align: center; /* Center the heading */
 }
 
 .prepaid-image-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   border-radius: 20px; /* Added rounded corners */
   overflow: hidden; /* Ensures child elements respect border radius */
 }
@@ -33,16 +33,7 @@
   height: 40vh;
   object-fit: cover;
 }
-.prepaid-plan-content-center{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  background-color: #E5F3F5;
-  border-radius: 20px; /* Increased rounded corners */
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(12px); /* Adding glass effect */
-  padding: 20px;
-}
+
 
 .prepaid-plans-container {
   display: grid;
@@ -52,7 +43,7 @@
 }
 
 .prepaid-plan {
-  background: #083D77;
+  background: black;
   color: white;
   padding: 30px;
   margin: 10px 0; /* Space between plans */
@@ -69,7 +60,7 @@
 .prepaid-plan:hover {
   transform: scale(1.05); /* Reduced scale on hover */
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
-  background-color: #005073; /* Slight color change on hover */
+  background-color: #444444; /* Slight color change on hover */
 }
 
 .prepaid-plan h3 {
@@ -83,7 +74,7 @@
 
 .prepaid-plan p {
   font-size: 20px; /* Increased size */
-  color: rgb(241, 250, 235); /* Ensure text inside plans is black for contrast */
+  color: white; /* Ensure text inside plans is black for contrast */
   margin-bottom: 1.5rem;
 }
 
@@ -110,10 +101,11 @@
 }
 
 .prepaid-buy-button:hover {
-  background-color: #ffffff; /* Light background on hover */
-  color: black; /* Black text color */
-  transform: translateY(-5px); /* Stronger lift effect on hover */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  background-color: white; /* Light background on hover */
+  color: #1167E5; /* Black text color */
+  transform: scale(1.05); /* Reduced scale on hover */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25), 
+              0 5px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
 .error-message {

@@ -5,41 +5,34 @@ import "slick-carousel/slick/slick-theme.css";
 import './styles/Landingpage.css'; // Import your CSS file
 import About from './About';
 import ImageSlider from './ImageSlider';
+import '@fortawesome/fontawesome-free/css/all.min.css'; // Import FontAwesome styles
 
 function LandingPage() {
   return (
-    <div className="landing-container">
-      <ImageSlider /> {/* Image slider at the top */}
-      <br></br>
+    <div className="">
+      <ImageSlider />
+      
       <main>
         <h1 className="landing-title">Connecting Lives at Your Fingertips</h1> {/* Main title */}
         <p className="landing-subtitle">Get exclusive offers on the purchase of any plans</p> {/* Offer text */}
 
-        <h2 className="section-title">Featured Plans</h2> {/* Section title */}
+        <h2 className="section-title">Buy a new connection</h2> {/* Section title */}
 
         <div className="plans-container">
-          {/* Prepaid Plan */}
-          <div className="plan">
-            <h3 className="plan-title" >PREPAID</h3>
-            <h4 className="plan-subtitle">Pay As You Go!</h4>
-            <p className="plan-description">Ideal for: Students, light users, and anyone who prefers control over their expenses.</p>
-            <div className="buttonplace">
-              <Link to="/prepaid">
-                <button className="plan-button">→</button>
-              </Link>
-            </div>
+          {/* Prepaid SIM Icon */}
+          <div className="plan-icon">
+            <Link to="/prepaid" className="icon-link">
+              <i className="fas fa-sim-card fa-5x"></i> {/* FontAwesome SIM icon */}
+              <p className="plan-label">PREPAID</p> {/* Prepaid Label */}
+            </Link>
           </div>
 
-          {/* Postpaid Plan */}
-          <div className="plan">
-            <h3 className="plan-title">POSTPAID</h3>
-            <h4 className="plan-subtitle">Unlimited Convenience!</h4>
-            <p className="plan-description">Ideal for: Professionals, families with uninterrupted services and bundled benefits.</p>
-            <div className="buttonplace">
-              <Link to="/postpaid">
-                <button className="plan-button">→</button>
-              </Link>
-            </div>
+          {/* Postpaid SIM Icon */}
+          <div className="plan-icon">
+            <Link to="/postpaid" className="icon-link">
+              <i className="fas fa-sim-card fa-5x"></i> {/* FontAwesome SIM icon */}
+              <p className="plan-label">POSTPAID</p> {/* Postpaid Label */}
+            </Link>
           </div>
         </div>
 

@@ -8,7 +8,7 @@ import img5 from '../assets/images/image5.jpg';
 import img6 from '../assets/images/image6.jpg';
 
 const ImageSlider = () => {
-  const images = [img1, img2 , img3, img4,img5,img6]; // Array of images
+  const images = [img1, img2, img3, img4, img5, img6]; // Array of images
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -30,7 +30,7 @@ const ImageSlider = () => {
     <div className="slider-container">
       <div
         className="slider-wrapper"
-        style={{ transform: `translateX(-${currentIndex * 100}vw)` }}
+        style={{ transform: `translateX(-${currentIndex * 100}%)` }} // Use % to handle full width
       >
         {images.map((image, index) => (
           <img key={index} src={image} alt={`Slide ${index}`} className="slider-image" />

@@ -1,10 +1,10 @@
-import React, { useState, useEffect ,useContext } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import './styles/view-history.css'; // Import the CSS file
-import { UserContext } from '../UserContext'; // Import the useUser hook
+import { UserContext } from '../UserContext'; // Import the UserContext
 
 function ViewHistory() {
-  const { userEmail} = useContext(UserContext);
+  const { userEmail } = useContext(UserContext);
   const [planDetails, setPlanDetails] = useState([]);
   const [loading, setLoading] = useState(true); // Loading state
 
@@ -49,7 +49,7 @@ function ViewHistory() {
       ) : planDetails.length === 0 ? (
         <p style={{ textAlign: 'center' }}>No plans found.</p>
       ) : (
-        <div className="plan-list">
+        <div className="plan-display-container"> {/* Added container for horizontal scrolling */}
           {planDetails.map((plan, index) => (
             <div key={index} className="plan-item">
               <h3 className="plan-title">{plan.planName}</h3>

@@ -4,8 +4,8 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #e5f3f5; /* Light blue to match the rest of the page */
-    font-family: 'Helvetica, Arial, sans-serif';
+    background-color: #fffff3; /* Light blue to match the rest of the page */
+
   }
   
   /* Box containing the form */
@@ -16,6 +16,11 @@
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for the form box */
     text-align: center;
     width: 400px;
+  }
+
+  .auth-box:hover {
+    transform: translateY(-10px); /* Slight lift on hover */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
   }
   
   /* Heading styling */
@@ -69,7 +74,7 @@
   
   /* Button styling */
   .auth-btn {
-    background-color: #083D77;
+    background-color: black;
     color: white;
     border: none;
     padding: 0.8rem 1.5rem;
@@ -84,8 +89,8 @@
   
   /* Button hover state */
   .auth-btn:hover {
-    background-color: #083D77; /* Light accent on hover */
-    color: black; /* Dark blue text on hover */
+    background-color: black; /* Light accent on hover */
+    color: #1167E5; /* Dark blue text on hover */
     transform: translateY(-3px); /* Lift effect */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
   }

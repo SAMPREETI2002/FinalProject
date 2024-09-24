@@ -42,7 +42,7 @@ const PostpaidPlans = () => {
       <br/>
       {/* Plans Section */}
       <div className="postpaid-main-content">
-        <div className='postpaid-plan-content-center'>
+        <div className=''>
           <h1>Postpaid Plans</h1>
           <p>Select a plan that suits you best.</p>
 
@@ -53,7 +53,6 @@ const PostpaidPlans = () => {
                 <div className="postpaid-plan" key={plan.id}>
                   <h3 className="postpaid-plan-name">{plan.planName}</h3>
                   <p>{plan.planDescription}</p>
-                  <p>Price: Rs. {plan.postpaidBalance}</p>
                   <p>Billing period: {plan.billingCycle} days</p>
                   <div className="postpaid-button-place">
                     <button

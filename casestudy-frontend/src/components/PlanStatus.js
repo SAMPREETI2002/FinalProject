@@ -69,18 +69,16 @@ const PlanStatus = () => {
               
               {/* Render Renew Plan checkbox and Pay button only if invoice data is available */}
               <div className="renew-plan">
-              <div className="renew-plan">
-  <label>
-    <input
-      type="checkbox"
-      checked={isRenew}
-      onChange={() => setIsRenew(!isRenew)}
-    />
-    <span className="change-text"> Change</span>
-  </label>
-</div>
-
+              
+              <input
+              type="checkbox"
+              checked={isRenew}
+              onChange={() => setIsRenew(!isRenew)}
+              />
+              <p className="change-text"> Change Plan</p>
+              
               </div>
+              
 
               <button onClick={handlePayClick} className="pay-button">
                 Pay

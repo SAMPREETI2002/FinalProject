@@ -69,18 +69,18 @@ body {
 
 /* Customer Reviews Section */
 .customer-reviews {
-    background-color: #083D77;
-    padding: 40px 20px;
+    background-color: black;
+    padding: 40px 40px;
     color: white;
-    font-style: italic;
     text-align: center;
     position: relative;
-    font-family: 'Helvetica', sans-serif;
+    max-width:100%;
 }
 
 .customer-reviews h2 {
     font-size: 28px;
     margin-bottom: 30px;
+    font-family: Helvetica, sans-serif;
 }
 
 /* Grid Layout for Reviews */
@@ -94,7 +94,7 @@ body {
 
 /* Review Card Styling */
 .review {
-    background-color: #003366;
+    background-color: black;
     padding: 15px;
     border-radius: 8px;
     position: relative;
@@ -125,7 +125,7 @@ body {
 .review:hover {
     transform: scale(1.05);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    background-color: #005073;
+    background-color: #292c2d;
 }
 
 /* Review Text Styling */

@@ -28,7 +28,7 @@ h1 {
 }
 
 .admin-button {
-  background-color: #083D77; /* Button background color */
+  background-color: black; /* Button background color */
   color: white; /* Button text color */
   border: none; /* Remove default border */
   cursor: pointer; /* Pointer cursor on hover */
@@ -46,10 +46,15 @@ h1 {
 }
 
 .admin-button:hover {
-  background-color: #062a54; /* Darker color on hover */
+  background-color: black; /* Darker color on hover */
 }
 
 p {
   color: Black; /* Error message color */
   text-align: center; /* Center the error message */
+}
+
+.success-message{
+  color:black;
+  font-weight: 500;
 }
