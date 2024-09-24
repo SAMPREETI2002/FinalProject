@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import { UserContext } from '../UserContext';
 import { loadStripe } from "@stripe/stripe-js";
 import { checkPlanStatus } from './CheckPlanStatus';
@@ -14,7 +14,7 @@ const PlanStatus = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const [isRenew, setIsRenew] = useState(false);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   useEffect(() => {
     const fetchPlanStatus = async () => {
