@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "LinkedList.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "node LinkedList.js",
+    "build": "echo 'No build step required for backend'"
   },
   "author": "",
   "type": "module",
